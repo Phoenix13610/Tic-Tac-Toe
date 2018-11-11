@@ -53,7 +53,6 @@ public class Comp extends Player {
 				boolean loop=true;
 				do {
 					Point po=new Point(r.nextInt(2),r.nextInt(2));
-					System.out.println(po.x()+" "+po.y());
 					loop=b.placePlayer(po, getSymbol());
 				}while(!loop);
 			}
