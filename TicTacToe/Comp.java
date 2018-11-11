@@ -44,16 +44,18 @@ public class Comp extends Player {
 			}else if(move==4) {
 				if(b.posOccupied(new Point(2,2))||b.posOccupied(new Point(2,1))) {
 					p=new Point(1,0);
-				}else if(b.posOccupied(new Point(1,0))) {
-					p=new Point(1,0);
+				}else if(b.posOccupied(new Point(1,2))) {
+					p=new Point(0,1);
 				}else {
 					p=new Point(2,2);
 				}
 			}else {
 				boolean loop=true;
 				do {
-					loop=b.placePlayer(new Point(r.nextInt(2),r.nextInt(2)), getSymbol());
-				}while(loop);
+					Point po=new Point(r.nextInt(2),r.nextInt(2));
+					System.out.println(po.x()+" "+po.y());
+					loop=b.placePlayer(po, getSymbol());
+				}while(!loop);
 			}
 		}
 		return p;
