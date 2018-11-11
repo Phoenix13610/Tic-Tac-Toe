@@ -52,7 +52,7 @@ public class Comp extends Player {
 			}else {
 				boolean loop=true;
 				do {
-					Point po=new Point(r.nextInt(2),r.nextInt(2));
+					Point po=new Point(r.nextInt(3),r.nextInt(3));
 					loop=b.placePlayer(po, getSymbol());
 				}while(!loop);
 			}
