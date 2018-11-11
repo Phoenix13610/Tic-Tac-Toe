@@ -29,7 +29,6 @@ public class TicTacToe3 {
 				turn=0;
 			}
 			win=b.checkWin();
-			System.out.println(win);
 		}while(win==' ');
 		b.print();
 		if(win!='t') {
